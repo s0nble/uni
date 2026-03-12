@@ -35,8 +35,18 @@ public:
 
     // ─── TODO: implement these ──────────────────────────
 
-    // Task 1: insert x after position p
-    // void insert(ElmenetType x, Position p) { ... }
+    //Task 1: insert x after position p
+     void insert(ElmenetType x, Position p) { 
+        if (p== NULL) p = end();
+        node* new_node = new node; 
+        new_node->element = x;
+        new_node->next = p->next;
+        p->next = new_node;
+        
+        if (new_node->next == NULL) tail = new_node;
+        
+        counter++;
+     }
 
     // Task 2: return the element stored in the node AFTER p
     // ElmenetType retrieve(Position pos) { ... }
