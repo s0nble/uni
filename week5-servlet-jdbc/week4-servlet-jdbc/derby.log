@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Mar 07 00:02:28 EET 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019c-c52c-6bdd-00002e1605c8 
+on database directory /home/fo2sh/education/advanced programming/AP-2026-private/boilerplates/week4-servlet-jdbc/db/AAST with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09 
+Loaded from file:/home/fo2sh/education/advanced%20programming/AP-2026-private/boilerplates/week4-servlet-jdbc/libs/derby.jar
+java.vendor=Ubuntu
+java.runtime.version=17.0.18+8-Ubuntu-124.04.1
+user.dir=/home/fo2sh/education/advanced programming/AP-2026-private/boilerplates/week4-servlet-jdbc
+os.name=Linux
+os.arch=amd64
+os.version=6.14.0-27-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
