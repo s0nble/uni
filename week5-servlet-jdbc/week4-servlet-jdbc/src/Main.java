@@ -39,18 +39,18 @@ public class Main {
 		stmt.execute(
 				"create table Users(id int, name varchar(25), email varchar(25), password varchar(25), primary key (id))");
 		conn.close();
-		// PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?)");
-		// pstmt.setInt(1, 1);
+		PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?)");
+		pstmt.setInt(1, 1);
 		// pstmt.setString(2, "mohamed");
 		// pstmt.setString(3, "test@gmail.com");
 		// pstmt.setString(4, "asdf1234");
 		// pstmt.execute();
 
-		// ResultSet result = stmt.executeQuery("select * from users");
+		ResultSet result = stmt.executeQuery("select * from users");
 
-		// while (result.next()) {
-		// 	System.out.println(result.getString("email"));
-		// }
+		while (result.next()) {
+		 	System.out.println(result.getString("email"));
+		}
 
 		server.start();
 		server.join();
