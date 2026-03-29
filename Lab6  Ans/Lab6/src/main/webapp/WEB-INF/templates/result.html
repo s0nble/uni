@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+</head>
+
+<body>
+
+<h2>Result</h2>
+
+Welcome
+<span th:text="${name}">Name</span>
+
+<br><br>
+
+Your final grade is
+<span th:text="${grade}">0</span>
+
+<br><br>
+
+Status:
+
+<b
+th:text="${status}"
+th:style="${status=='PASS'} ? 'color:green' : 'color:red'">
+PASS
+</b>
+
+</body>
+</html>
