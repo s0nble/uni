@@ -89,10 +89,6 @@ elmenetType size(){ return counter; }
 };
 
 
-elmenetType sum(List l){
-List newList;
-} 
-
 List concatinate(List l1, List l2){
     List newList;
     
