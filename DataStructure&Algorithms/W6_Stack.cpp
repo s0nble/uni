@@ -67,18 +67,42 @@ public:
 
     int size() { return counter; }
 
+    
     // Task 6: push an element onto the stack
-    // void push(ElementType el) { ... }
+    void push(ElementType el) { 
+        node* newNode = new node; 
+        newNode->element = el;
+        newNode->next = top;
+        top = newNode;
+        counter++;
+    }
+
 
     // Task 7: remove and return the top element
-    // ElementType pop() { ... }
+    ElementType pop() {
+        if(isEmpty()){
+            cout << "Stack is empty!"<<endl;
+            return -999999999; 
+        }
+        
+        node* current = top;
+        top = current->next;
+        ElementType temp;
+        temp=current->element;
+        delete current;
+        counter--;
+        return temp;
 
-    // Task 8: return the top element without removing it
-    // ElementType peek() { ... }
+        
+    }
 };
 
 // Task 9: reverse a linked stack using a second stack
-// LinkedStack reverse(LinkedStack s1) { ... }
+LinkedStack reverse(LinkedStack s1) {
+
+
+    
+}
 
 // Task 10: merge two linked stacks preserving order
 // LinkedStack merge(LinkedStack &s1, LinkedStack &s2) { ... }
@@ -98,12 +122,12 @@ int main() {
     // ── Test Part B ──────────────────────────────────
     cout << "=== Linked Stack ===" << endl;
     LinkedStack s2;
-    // s2.push(10);
-    // s2.push(20);
-    // s2.push(30);
+    s2.push(10);
+    s2.push(20);
+    s2.push(30);
     // cout << "Top: " << s2.peek() << endl;        // 30
-    // cout << "Popped: " << s2.pop() << endl;      // 30
-    // cout << "Size: " << s2.size() << endl;        // 2
+    cout << "Popped: " << s2.pop() << endl;      // 30
+    cout << "Size: " << s2.size() << endl;        // 2
 
     return 0;
 }
