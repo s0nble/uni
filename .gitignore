@@ -1,0 +1,32 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.tmp
+*.temp
+
+# Build outputs
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Logs
+*.log
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# NuGet
+packages/
+*.nupkg
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
