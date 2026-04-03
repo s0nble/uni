@@ -27,7 +27,11 @@ public:
     int size() { return counter; }
 
     // Task 1: push an element onto the stack
-    // void push(ElementType el) { ... }
+    void push(ElementType el) {
+
+
+
+    }
 
     // Task 2: remove and return the top element
     // ElementType pop() { ... }
@@ -106,8 +110,6 @@ ElementType peek(){
 }
 };
 
-
-
 // Task 9: reverse a linked stack using a second stack
 LinkedStack reverse(LinkedStack &s1) {
     LinkedStack s2;
@@ -156,19 +158,17 @@ int main() {
     // cout << "Popped: " << s2.pop() << endl;      // 30
     // cout << "Size: " << s2.size() << endl;        // 2
 
-//     s3.push(1); s3.push(2); s3.push(3);
-//     LinkedStack r = reverse(s3);
-//     cout << r.pop() << endl;  // 1
-//     cout << r.pop() << endl;  // 2
-//     cout << r.pop() << endl;  // 3
-//     return 0;
-// }
-
-
-LinkedStack a, b;
-a.push(5); a.push(15); a.push(25);
-b.push(65); b.push(75); b.push(85);
-LinkedStack m = merge(a, b);
-while (!m.isEmpty()) cout << m.pop() << " ";
-cout << endl;
+    // s3.push(1); s3.push(2); s3.push(3);
+    // LinkedStack r = reverse(s3);
+    // cout << r.pop() << endl;  // 1
+    // cout << r.pop() << endl;  // 2
+    // cout << r.pop() << endl;  // 3
+    // return 0;
+    
+    LinkedStack a, b;
+    // a.push(5); a.push(15); a.push(25);
+    // b.push(65); b.push(75); b.push(85);
+    // LinkedStack m = merge(a, b);
+    // while (!m.isEmpty()) cout << m.pop() << " ";
+    // cout << endl;
 }
