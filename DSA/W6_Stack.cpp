@@ -89,7 +89,25 @@ typedef int ElementType;
 //     }
 //     return s4;
 
-// }
+        // ArrayStack copyStack(ArrayStack s, int size) {
+        //     ArrayStack temp(size);
+        //     ArrayStack copy(size);
+
+        //     // Step 1: reverse original into temp
+        //     while (!s.isEmpty()) {
+        //         temp.push(s.pop());
+        //     }
+
+        //     // Step 2: restore original AND build copy
+        //     while (!temp.isEmpty()) {
+        //         int x = temp.pop();
+        //         s.push(x);      // restore original
+        //         copy.push(x);   // build copy
+        //     }
+
+        //     return copy;
+        // }
+        //}
 
 // ══════════════════════════════════════════════════════════════
 // PART B – Linked-List Stack
@@ -178,6 +196,33 @@ LinkedStack merge(LinkedStack &s1, LinkedStack &s2) {
         s5.push(s4.pop());
     }
     return s5;
+}
+
+LinkedStack copyStack(LinkedStack s) { // pass by value (copy)
+        LinkedStack temp;
+        LinkedStack copy;
+
+        // Step 1: reverse into temp
+        while (!s.isEmpty()) {
+            temp.push(s.pop());
+        }
+
+        // Step 2: restore original + build copy
+        while (!temp.isEmpty()) {
+            int x = temp.pop();
+            s.push(x);       // restore original
+            copy.push(x);    // build copy
+        }
+
+        return copy;
+    }
+
+void printStack(LinkedStack s) { // copy
+    cout << "Top → ";
+    while (!s.isEmpty()) {
+        cout << s.pop() << " ";
+    }
+    cout << endl;
 }
 
 
