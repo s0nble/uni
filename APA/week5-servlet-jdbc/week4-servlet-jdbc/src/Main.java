@@ -35,10 +35,10 @@
 // 		String conStr = "jdbc:derby:db/AAST;create=true";
 // 		Connection conn = DriverManager.getConnection(conStr);
 
-		Statement stmt = conn.createStatement();
-		stmt.execute(
-				"create table Users(id int, name varchar(25), email varchar(25), password varchar(25), primary key (id))");
-		conn.close();
+		// Statement stmt = conn.createStatement();
+		// stmt.execute(
+		// 		"create table Users(id int, name varchar(25), email varchar(25), password varchar(25), primary key (id))");
+		// conn.close();
 		// PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?)");
 		// pstmt.setInt(1, 1);
 		// pstmt.setString(2, "mohamed");
