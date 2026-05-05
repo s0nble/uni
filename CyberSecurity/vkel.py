@@ -57,7 +57,7 @@ class ChatClient:
         try:
             self.ws = await websockets.connect(self.url)
 
-            # 🔐 SEND PASSWORD (NOT ENCRYPTED)
+            #SEND PASSWORD (NOT ENCRYPTED)
             await self.ws.send(self.password)
 
             self.chat_box.insert(tk.END, "[Connected]\n")
@@ -65,12 +65,12 @@ class ChatClient:
             while True:
                 msg = await self.ws.recv()
 
-                # 🧠 handle auth failure
+                #handle auth failure
                 if msg == "AUTH_FAIL":
                     self.chat_box.insert(tk.END, "[Wrong Password]\n")
                     return
 
-                # 🔐 decrypt messages ONLY
+                #decrypt messages ONLY
                 try:
                     decrypted = self.decrypt(msg)
                     self.chat_box.insert(tk.END, f"Peer: {decrypted}\n")
