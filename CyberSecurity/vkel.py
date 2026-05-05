@@ -8,16 +8,16 @@ import os
 
 class ChatClient:
     def __init__(self):
-        # 🌐 URL
+        #URL
         self.url = input("Enter server URL: ").strip()
         if self.url.startswith("https://"):
             self.url = self.url.replace("https://", "wss://")
 
-        # 🔐 PASSWORD INPUT
+        #PASSWORD INPUT
         self.password = input("Enter shared password: ").strip()
         self.KEY = hashlib.sha256(self.password.encode()).digest()
 
-        # 🖥 UI
+        #UI
         self.window = tk.Tk()
         self.window.title("Secure Chat")
 
@@ -28,13 +28,12 @@ class ChatClient:
         self.entry.pack(fill="x")
         self.entry.bind("<Return>", self.send)
 
-        # 🔁 Async loop
+        #Async loop
         self.loop = asyncio.new_event_loop()
         threading.Thread(target=self.start_loop, daemon=True).start()
 
-    # =====================
-    # ENCRYPT / DECRYPT
-    # =====================
+    
+    # Encrypt / Decrypt
     def encrypt(self, msg):
         aesgcm = AESGCM(self.KEY)
         nonce = os.urandom(12)
@@ -48,16 +47,12 @@ class ChatClient:
         ct = raw[12:]
         return aesgcm.decrypt(nonce, ct, None).decode()
 
-    # =====================
     # LOOP
-    # =====================
     def start_loop(self):
         asyncio.set_event_loop(self.loop)
         self.loop.run_until_complete(self.connect())
 
-    # =====================
     # CONNECT
-    # =====================
     async def connect(self):
         try:
             self.ws = await websockets.connect(self.url)
@@ -85,9 +80,7 @@ class ChatClient:
         except Exception as e:
             self.chat_box.insert(tk.END, f"[Error: {e}]\n")
 
-    # =====================
     # SEND
-    # =====================
     def send(self, event=None):
         msg = self.entry.get()
         if not msg:
