@@ -33,3 +33,6 @@ packages/
 
 Web-Project/
 
+pdf_guides/
+
+.pdfenv
