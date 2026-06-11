@@ -248,26 +248,26 @@ int main() {
 
     // ── Test Part B ──────────────────────────────────
     // cout << "=== Linked Queue ===" << endl;
-    LinkedQueue q2;
+    // LinkedQueue q2;
 
-    q2.enqueue(5);
-    q2.enqueue(9);
-    q2.enqueue(10);
-    q2.enqueue(11);
+    // q2.enqueue(5);
+    // q2.enqueue(9);
+    // q2.enqueue(10);
+    // q2.enqueue(11);
 
-    cout << "Before reverse: ";
-    q2.printQueue();
+    // cout << "Before reverse: ";
+    // q2.printQueue();
 
-    q2.reverseQueue();
+    // q2.reverseQueue();
 
-    cout << "After reverse: ";
-    q2.printQueue();
+    // cout << "After reverse: ";
+    // q2.printQueue();
 
-    cout << "Dequeued: " << q2.dequeue() << endl;
-    cout << "Dequeued: " << q2.dequeue() << endl;
+    // cout << "Dequeued: " << q2.dequeue() << endl;
+    // cout << "Dequeued: " << q2.dequeue() << endl;
 
-    cout << "After two dequeues: ";
-    q2.printQueue();
+    // cout << "After two dequeues: ";
+    // q2.printQueue();
 
-    return 0;
+    // return 0;
 }
